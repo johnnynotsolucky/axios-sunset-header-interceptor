@@ -1,0 +1,20 @@
+{
+  "name": "axios-header-interceptor",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run build && ava",
+    "build": "bili --filename index.js"
+  },
+  "author": "Tyrone Tudehope",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnynotsolucky/axios-sunset-header-interceptor.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "bili": "^3.1.2"
+  }
+}
