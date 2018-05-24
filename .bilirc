@@ -1,0 +1,13 @@
+{
+  "input": [
+    "src/*[!.test].js"
+  ],
+  "filename": "[name][suffix].js",
+  "format": [
+    "cjs",
+    "umd",
+    "es"
+  ],
+  "external": ["./src/index.js"],
+  "moduleName": "sunsetHeaderInterceptor"
+}

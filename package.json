@@ -1,20 +1,35 @@
 {
-  "name": "axios-header-interceptor",
+  "name": "sunset-header-interceptor",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
   "scripts": {
     "test": "npm run build && ava",
-    "build": "bili --filename index.js"
+    "build": "bili",
+    "prettify": "prettier src/**/* --write",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "author": "Tyrone Tudehope",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnnynotsolucky/axios-sunset-header-interceptor.git"
+    "url": "https://github.com/johnnynotsolucky/sunset-header-interceptor.git"
   },
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.25.0",
-    "bili": "^3.1.2"
-  }
+    "bili": "^3.1.2",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.12.1"
+  },
+  "pre-commit": [
+    "prettify",
+    "test"
+  ],
+  "keywords": [
+    "http",
+    "http-headers",
+    "sunset",
+    "middleware",
+    "interceptor"
+  ]
 }
