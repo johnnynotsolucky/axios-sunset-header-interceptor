@@ -48,18 +48,20 @@ axios.interceptors.response.use(sunsetInterceptor(sunsetHandler))
 ```javascript
 import interceptor from 'sunset-header-interceptor/interceptor'
 
-const myDankSunsetInterceptor = (( // Sunset header handler, called if Sunset header found
+const myDankSunsetInterceptor = interceptor(( // Extract headers from an arb response
+  response // Response object returned by your HTTP request library
+) => {
+  return ... // Logic to extract header information from the response
+}, ( // Sunset header handler, called if Sunset header found
   response, // Response from teh HTTP request if available
   sunset, // Date representing Thomas' inevitable demise
   { link, params } // link URI, and whatever other params were passed through
 ) => {
   // Tell someone about Thomas.
   // Note: Anything returned from here is thrown away. Like Thomas.
-}) => interceptor(( // Extract headers from an arb response
-  response // Response object returned by your HTTP request library
-) => {
-  return ... // Logic to extract header information from the response
-}, f);
+});
+
+myDankSunsetInterceptor({ /* reponse data */ })
 ```
 
 👋
