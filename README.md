@@ -1,4 +1,4 @@
-# Axios Sunset Header Interceptor
+# Sunset Header Interceptor
 
 [The Sunset HTTP Header draft](https://tools.ietf.org/html/draft-wilde-sunset-header-05)
 
