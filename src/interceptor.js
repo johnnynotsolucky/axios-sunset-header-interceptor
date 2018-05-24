@@ -14,8 +14,8 @@ const parseLink = v => () =>
   v
     .match(LINK)
     .map(split(/>/g))
-    .map(([url, params]) => ({
-      url: url.substring(1),
+    .map(([link, params]) => ({
+      link: link.substring(1),
       params: extractLinkParams(params)
     }))
     .find(matchRelation("sunset"));

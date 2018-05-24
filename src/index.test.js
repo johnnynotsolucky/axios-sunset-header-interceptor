@@ -19,7 +19,7 @@ test("correctly parses sunset time with related link", t => {
   const f = (response, sunset, extra) => {
     t.deepEqual(sunset, new Date(date));
     t.deepEqual(extra, {
-      url: "https://foo.com/bar",
+      link: "https://foo.com/bar",
       params: { rel: "sunset" }
     });
   };
